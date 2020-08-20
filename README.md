@@ -31,8 +31,13 @@ request json
 
 ### EF Core
 Alguns comandos para uso de migrations
-```dotnet ef migrations add Initial --context MDC.Owasp.API.Infrastructure.OwaspDbContext -o Infrastructure/Migrations```
-```dotnet ef database update```
+```bash
+dotnet ef migrations add Initial --context MDC.Owasp.API.Infrastructure.OwaspDbContext -o Infrastructure/Migrations
+```
+
+```bash
+dotnet ef database update
+```
 
 ### Seed
 Dados previamente cadastrados

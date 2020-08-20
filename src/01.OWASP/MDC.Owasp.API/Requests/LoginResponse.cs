@@ -8,16 +8,17 @@ namespace MDC.Owasp.API.Requests
 {
     public class LoginResponse
     {
-        public Guid UserId { get; set; }
-        public string Name { get; set; }
-        public string AccessToken => Guid.NewGuid().ToString();
+        public Guid UserId { get; private set; }
+        public string Name { get; private set; }
+        public string AccessToken { get; private set; }
         public string GrantType => "Bearer";
         public DateTime Expiration => DateTime.Now.AddDays(1);
 
-        public LoginResponse(Guid userId, string name)
+        public LoginResponse(Guid userId, string name, string token)
         {
             UserId = userId;
             Name = name;
+            AccessToken = token;
         }
     }
 }

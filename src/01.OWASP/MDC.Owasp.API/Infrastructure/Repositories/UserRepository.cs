@@ -27,7 +27,7 @@ namespace MDC.Owasp.API.Infrastructure.Repositories
 
         public async Task<User> GetByLoginAndPasswordAsync(string login, string password)
         {
-            var query = "SELECT * FROM Users WHERE Login = '" + login + "AND Password = '" + password + "'";
+            var query = "SELECT * FROM Users WHERE Username = '" + login + "' AND Password = '" + password + "'";
 
             var result = await _owaspDbContext.Users.FromSqlRaw(query).FirstOrDefaultAsync();
 

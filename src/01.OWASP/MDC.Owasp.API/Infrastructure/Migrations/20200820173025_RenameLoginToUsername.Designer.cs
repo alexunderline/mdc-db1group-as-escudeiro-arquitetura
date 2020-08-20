@@ -3,14 +3,16 @@ using System;
 using MDC.Owasp.API.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace MDC.Owasp.API.Infrastructure.Migrations
 {
     [DbContext(typeof(OwaspDbContext))]
-    partial class OwaspDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200820173025_RenameLoginToUsername")]
+    partial class RenameLoginToUsername
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
